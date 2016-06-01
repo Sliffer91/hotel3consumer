@@ -22,5 +22,5 @@ public class Hotel3WSConsumer {
         hotel3consumer.Hotel3WS port = service.getHotel3WSPort();
         return port.registrarReserva(persona, name, inicio, fin, habitaciones);
     }
-    
+
 }

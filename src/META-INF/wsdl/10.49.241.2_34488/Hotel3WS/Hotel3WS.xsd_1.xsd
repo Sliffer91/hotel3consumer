@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://ws.hotel3.ecutravel.espe.edu.ec.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.hotel3.ecutravel.espe.edu.ec.com/">
+
+<xs:element name="buscarHabitacionesEnFechas" type="tns:buscarHabitacionesEnFechas"/>
+
+<xs:element name="buscarHabitacionesEnFechasResponse" type="tns:buscarHabitacionesEnFechasResponse"/>
+
+<xs:element name="habitacion" type="tns:habitacion"/>
+
+<xs:element name="registrarReserva" type="tns:registrarReserva"/>
+
+<xs:element name="registrarReservaResponse" type="tns:registrarReservaResponse"/>
+
+<xs:element name="tipoHabitacion" type="tns:tipoHabitacion"/>
+
+<xs:complexType name="registrarReserva">
+<xs:sequence>
+<xs:element name="persona" type="xs:int" minOccurs="0"/>
+<xs:element name="name" type="xs:int" minOccurs="0"/>
+<xs:element name="inicio" type="xs:string" minOccurs="0"/>
+<xs:element name="fin" type="xs:string" minOccurs="0"/>
+<xs:element name="habitaciones" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrarReservaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarHabitacionesEnFechas">
+<xs:sequence>
+<xs:element name="inicio" type="xs:string" minOccurs="0"/>
+<xs:element name="fin" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarHabitacionesEnFechasResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:habitacion" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="habitacion">
+<xs:sequence>
+<xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="habCodigo" type="xs:int" minOccurs="0"/>
+<xs:element name="hotel" type="xs:string" minOccurs="0"/>
+<xs:element name="numero" type="xs:integer" minOccurs="0"/>
+<xs:element name="precioCatalogo" type="xs:decimal" minOccurs="0"/>
+<xs:element name="precioDesayuno" type="xs:decimal" minOccurs="0"/>
+<xs:element name="tipCodigo" type="tns:tipoHabitacion" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoHabitacion">
+<xs:sequence>
+<xs:element name="capacidad" type="xs:integer" minOccurs="0"/>
+<xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="tipCodigo" type="xs:decimal" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

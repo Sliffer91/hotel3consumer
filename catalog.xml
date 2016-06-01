@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://10.49.241.2:34488/Hotel3WS/Hotel3WS?WSDL" uri="xml-resources/web-service-references/Hotel3WS/wsdl/10.49.241.2_34488/Hotel3WS/Hotel3WS.wsdl"/>
+    <system systemId="http://10.49.241.2:34488/Hotel3WS/Hotel3WS?xsd=1" uri="xml-resources/web-service-references/Hotel3WS/wsdl/10.49.241.2_34488/Hotel3WS/Hotel3WS.xsd_1.xsd"/>
+</catalog>
